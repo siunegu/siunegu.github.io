@@ -4,7 +4,7 @@ relative_permalinks: true
 
 # Setup
 title:            "@siunegu"
-tagline:          On Getting There
+tagline:          On Becoming a Programmer
 url:              http://getpoole.com
 paginate:         1
 baseurl:          /
