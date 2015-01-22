@@ -252,12 +252,13 @@ tbody tr:nth-child(odd) th {
 /*
  * Main wrap styling
  */
-#red-bar {
+#top-bar {
   position: fixed;
   top: 0px;
   z-index: 1000;
   width: 100%;
-  border-top: 5px solid #F72C25;
+  height: 1px;
+  box-shadow: 0 5px 10px 0 rgba(255,255,255,.26);
 }
 
 /*
@@ -452,7 +453,6 @@ a.pagination-item:hover {
   font-size: 2em;
   padding: 0.2em 0.3em;
   border: 0;
-  /*border: 5px solid #F72C25;*/
   background-color: rgba(243, 243, 243, 0.0);
   color: #2f2f2f; 
   -webkit-transition: 0.3s all ease-in-out;
@@ -461,7 +461,6 @@ a.pagination-item:hover {
 .menu-button:hover {
   color: #F72C25;
   padding-top: 0.5em;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);  
 }
 
 @media (max-width: 1000px) {
