@@ -66,6 +66,7 @@ body {
 a {
   color: #268bd2;
   text-decoration: none;
+  -webkit-transition: all 0.5s ease-in;
 }
 a strong {
   color: inherit;
@@ -73,7 +74,7 @@ a strong {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  text-decoration: underline;
+  opacity: 0.9;
 }
 
 /* Headings */
@@ -259,6 +260,36 @@ tbody tr:nth-child(odd) th {
   width: 100%;
   height: 1px;
   box-shadow: 0 5px 10px 0 rgba(255,255,255,.26);
+}
+
+/*
+ * Post Header & underline
+ */
+ .post-header > a {
+  color: #292929;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.post-header > a:before, .underlined:before {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #505050;
+  position: absolute;
+  left: 0; bottom: -2px; right: 0;
+  
+  -webkit-transition: all 0.35s ease-in-out 0s;
+  -webkit-transform: scaleX(0);
+  
+  transition: all 0.35s ease-in-out 0s;
+  transform: scaleX(0);
+}
+
+.post-header a:hover:before, .underlined:hover:before  {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 /*
@@ -462,10 +493,13 @@ a.pagination-item:hover {
 }
 
 @media (max-width: 1000px) {
-  .menu-button {
-    top: 12px;
-    font-size: 1.6em;
-    background-color: rgba(243, 243, 243, 0.3);    
+ .menu-button {
+  top: 8px;
+  right: 12px;
+  font-size: 1.6em;
+  }
+  .overlay ul li {
+    line-height: 3.5em;
   }
 }
 

@@ -24,7 +24,7 @@
 $(function() {
 	$(window).scroll(function () {
 		if ( $(window).width() < 1000 ) {
-	    $('.menu-button').fadeOut();
+	    $('.menu-button').fadeOut('slow','ease-in-out');
 
 	    var scrollA = $('body').scrollTop();
 
@@ -32,7 +32,7 @@ $(function() {
 	        if(scrollA == $('body').scrollTop()){
 	            $('.menu-button').fadeIn();
 	        }
-	    }, 200);
+	    }, 400);
 
 		}
 	});
