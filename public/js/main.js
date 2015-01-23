@@ -1,39 +1,52 @@
-// $(document).ready( function(){
+// $(function() {
+// 	var isLessThan1000 = $(document).width() < 1000; // declare var for checking if document width is < 1000
 // 	$(window).resize(function() {
-// 			var width = $(document).width();
-// 			if ( width < 1000 ) {
+// 		isLessThan1000 = $(document).width() < 1000; // on window resize, change isLessThan1000 to be true if < 1000
+// 	}); 
 
-// 				var $document = $(document),
-// 				    $element = $(".menu-button"),
-// 				    className = ".menu-button-hidden";
+// 	var menuVisible = true; // 
 
-// 				$document.scroll(function() {
-// 				  $element.toggleClass(className, $document.scrollTop() >= 50);
-// 				});		
-
-// 				$(".menu-button").delay(1000).fadeOut("slow"); // Fades out the menu-button after 1 second
-// 				$("button.menu-button").toggleClass("button.menu-button-hidden");
+// 	$(document).scroll(function() { // on document scroll...
+// 		if ( isLessThan1000 && $(document).scrollTop() > 50 ) { // if document width < 1000 and scroll from top 50px...
+// 			if (menuVisible) { // menu
+// 				$(".menu-button").fadeOut(2000);
 // 			}
-// 	});
-
-	// $(window).scroll(function() {
-	//     if ($(this).scrollTop() > 100) {
-	//         $('.menu-button').fadeIn();
-	//     } else {
-	//         $('.menu-button').fadeOut();
-	//     }
-	// })
-// });
-
-
-// $(document).ready(function() {
-
-// 	var button = $(".menu-button");
-// 	$(window).scroll(function() {
-// 		if ( $(window).scrollTop() > 50 ) {
-
+// 			menuVisible = false;
+// 		} else {
+// 			if (!menuVisible) {
+// 				$(".menu-button").fadeIn(2000);
+// 			}
+// 			menuVisible = true;
 // 		}
 // 	});
-
 // });
 
+$(function() {
+	$(window).scroll(function () {
+		if ( $(window).width() < 1000 ) {
+	    $('.menu-button').fadeOut();
+
+	    var scrollA = $('body').scrollTop();
+
+	    setTimeout(function(){
+	        if(scrollA == $('body').scrollTop()){
+	            $('.menu-button').fadeIn();
+	        }
+	    }, 200);
+
+		}
+	});
+});
+	// var isLessThan1000 = $(document).width() < 1000;
+	// $(window).resize(function() {
+	// 	isLessThan1000 = $(document).width() < 1000;
+	// });
+
+	// if ( isLessThan1000 ) {
+	// 	$(".menu-button").fadeOut();
+	// }
+
+	// $(document).on("click", function() {
+	// 	$(".menu-button").fadeIn();
+	// });
+	

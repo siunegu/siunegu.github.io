@@ -448,10 +448,9 @@ a.pagination-item:hover {
   position: fixed;
   z-index: 0;
   right: 32px;
-  top: 0px;
+  top: 12px;
   font-weight: 900;
   font-size: 2em;
-  padding: 0.2em 0.3em;
   border: 0;
   background-color: rgba(243, 243, 243, 0.0);
   color: #2f2f2f; 
@@ -460,11 +459,12 @@ a.pagination-item:hover {
 
 .menu-button:hover {
   color: #F72C25;
-  padding-top: 0.5em;
 }
 
 @media (max-width: 1000px) {
   .menu-button {
+    top: 12px;
+    font-size: 1.6em;
     background-color: rgba(243, 243, 243, 0.3);    
   }
 }
