@@ -333,6 +333,15 @@ tbody tr:nth-child(odd) th {
   margin-right: auto;
 }
 
+.center-content {
+  padding: 25px;
+}
+
+.center-content img {
+  text-align: center;
+  margin: 0 auto;
+}
+
 
 /*
  * Masthead
@@ -490,6 +499,11 @@ a.pagination-item:hover {
 
 .menu-button:hover {
   color: #F72C25;
+}
+
+.menu-button-hidden {
+  -webkit-transition: 0.3s all ease-in-out;  
+  opacity: 0;
 }
 
 @media (max-width: 1000px) {

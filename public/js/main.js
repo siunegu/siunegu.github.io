@@ -24,15 +24,15 @@
 $(function() {
 	$(window).scroll(function () {
 		if ( $(window).width() < 1000 ) {
-	    $('.menu-button').fadeOut('slow','ease-in-out');
+	    $('.menu-button').addClass("menu-button-hidden");
 
 	    var scrollA = $('body').scrollTop();
 
 	    setTimeout(function(){
 	        if(scrollA == $('body').scrollTop()){
-	            $('.menu-button').fadeIn();
+	            $('.menu-button').removeClass("menu-button-hidden");
 	        }
-	    }, 400);
+	    }, 600);
 
 		}
 	});
