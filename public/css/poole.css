@@ -362,6 +362,17 @@ tbody tr:nth-child(odd) th {
   margin: 0 auto;
 }
 
+/*
+ * One-Third Column Content
+ *
+ */
+
+.third-column {
+  width: 33.33%;
+  padding: 25px;
+  margin: 0 10px;
+}
+
 
 /*
  * Masthead
@@ -505,10 +516,23 @@ a.pagination-item:hover {
 
 .footer {
   padding: 35px 0;
+  position: relative;
 }
+
 .footer small {
   font-family: 'PT Serif', serif;
   font-weight: bold;
+}
+
+/*
+ * Footer Social
+ *
+ */
+
+.footer-social {
+  position: absolute;
+  right: 0;
+  font-size: 1.2em;
 }
 
 /*

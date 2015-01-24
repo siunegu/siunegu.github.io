@@ -12,3 +12,4 @@ layout: page
 		Enjoy your stay!
 	</p>
 </div>
+
