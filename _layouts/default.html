@@ -17,12 +17,7 @@
         <button class="menu-button" id="trigger-overlay">&#9776;</button>
         {{ content }}
       </main>
-
-      <footer class="footer">
-        <small>
-          &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time> Eugenius Lai, @siunegu. All rights reserved.
-        </small>
-      </footer>
+      {% include footer.html %}
     </div>
 
     <!-- open/close -->

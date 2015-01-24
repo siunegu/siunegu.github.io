@@ -27,6 +27,13 @@
 
 
 /*
+ * Font Imports
+ *
+ */
+
+@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+
+/*
  * Body resets
  *
  * Update the foundational and global aspects of the page.
@@ -74,7 +81,7 @@ a strong {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 /* Headings */
@@ -82,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: bold;
   line-height: 1.25;
-  color: #313131;
+  color: #444;
   text-rendering: optimizeLegibility;
 }
 h1 {
@@ -103,6 +110,7 @@ h4, h5, h6 {
 
 /* Body text */
 p {
+  font-family: 'PT Serif', serif;
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -382,7 +390,7 @@ tbody tr:nth-child(odd) th {
 .page-title,
 .post-title,
 .post-title a {
-  color: #303030;
+  color: #444;
 }
 .page-title,
 .post-title {
@@ -481,6 +489,10 @@ a.pagination-item:hover {
 
 .footer {
   padding: 35px 0;
+}
+.footer small {
+  font-family: 'PT Serif', serif;
+  font-weight: bold;
 }
 
 /*
