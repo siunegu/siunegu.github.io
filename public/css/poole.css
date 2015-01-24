@@ -64,7 +64,7 @@ body {
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #268bd2;
+  color: #007af4;
   text-decoration: none;
   -webkit-transition: all 0.5s ease-in;
 }
@@ -251,18 +251,6 @@ tbody tr:nth-child(odd) th {
 }
 
 /*
- * Main wrap styling
- */
-#top-bar {
-  position: fixed;
-  top: 0px;
-  z-index: 1000;
-  width: 100%;
-  height: 1px;
-  box-shadow: 0 5px 10px 0 rgba(255,255,255,.26);
-}
-
-/*
  * Post Header & underline
  */
  .post-header > a {
@@ -335,10 +323,18 @@ tbody tr:nth-child(odd) th {
 
 .center-content {
   padding: 25px;
+  text-align: center;
+}
+
+.center-content,.fa-quote-left,.fa-quote-right {
+  color: #434447;
+}
+
+.center-content small {
+  color: #676b72;
 }
 
 .center-content img {
-  text-align: center;
   margin: 0 auto;
 }
 
@@ -479,6 +475,15 @@ a.pagination-item:hover {
 }
 
 /*
+ * Footer
+ * 
+ */
+
+.footer {
+  padding: 35px 0;
+}
+
+/*
  * Huge Inc Style Overlay
  *
  * Super lightweight (HTML-wise) Overlay. 
@@ -498,7 +503,7 @@ a.pagination-item:hover {
 }
 
 .menu-button:hover {
-  color: #F72C25;
+  color: #007af4;
 }
 
 .menu-button-hidden {
@@ -525,7 +530,7 @@ a.pagination-item:hover {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(247,44,37,0.9);
+  background: rgba(0,0,0,0.95);
 }
 
 /* Overlay closing cross */
@@ -548,9 +553,11 @@ a.pagination-item:hover {
 .overlay nav {
   text-align: center;
   position: relative;
-  top: 42%;
+  top: 55%;
   height: 60%;
   font-size: 54px;
+  font-weight: 900;
+  line-height: 2em;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
@@ -572,7 +579,7 @@ a.pagination-item:hover {
 }
 
 .overlay ul li a {
-  font-weight: 300;
+  font-weight: 500;
   display: block;
   color: #fff;
   -webkit-transition: color 0.2s;
@@ -581,7 +588,7 @@ a.pagination-item:hover {
 
 .overlay ul li a:hover,
 .overlay ul li a:focus {
-  color: #e3fcb1;
+  color: #21aff7;
   text-decoration: none;
 }
 

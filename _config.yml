@@ -6,13 +6,21 @@ relative_permalinks: true
 title:            "@siunegu"
 tagline:          Full Stack Web Developer
 url:              http://siunegu.github.io
-paginate:         1
+paginate:         3
 baseurl:          /
 author:
   name:           Eugenius Lai
   url:            https://twitter.com/siunegu
   email:          equalsbrackets@@gmail.com
 
+# Markdown Processors
+markdown: redcarpet
+highlighter: pygments
+redcarpet: 
+  extensions: ["no_intra_emphasis", "no-fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+coderay:
+  coderay_line_numbers: inline
+  
 # Custom vars
 version:          1.0.0
 github:
