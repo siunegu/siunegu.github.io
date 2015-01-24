@@ -73,7 +73,7 @@ body {
 a {
   color: #007af4;
   text-decoration: none;
-  -webkit-transition: all 0.5s ease-in;
+  -webkit-transition: opacity 0.3s;
 }
 a strong {
   color: inherit;
@@ -81,7 +81,7 @@ a strong {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
-  opacity: 0.8;
+  /*opacity: 0.8;*/
 }
 
 /* Headings */
@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: bold;
   line-height: 1.25;
-  color: #444;
+  color: #333;
   text-rendering: optimizeLegibility;
 }
 h1 {
@@ -315,23 +315,6 @@ tbody tr:nth-child(odd) th {
 }
 
 /*
- * Icon ( fa-icons ) monkey patching
- *
- */
-
-.fa {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 1em;
-  position: relative !important;
-  top: -0.1em !important;
-} 
-
-/*
  * Container
  *
  * Center the page content.
@@ -344,6 +327,11 @@ tbody tr:nth-child(odd) th {
   margin-left:  auto;
   margin-right: auto;
 }
+
+/*
+ * Center Stuff
+ *
+ */
 
 .center-content {
   padding: 25px;
@@ -361,6 +349,12 @@ tbody tr:nth-child(odd) th {
 .center-content img {
   margin: 0 auto;
 }
+
+.center-text {
+  text-align: center;
+}
+
+
 
 /*
  * One-Third Column Content
@@ -410,14 +404,14 @@ tbody tr:nth-child(odd) th {
 
 .page,
 .post {
-  margin-bottom: 4em;
+  margin: 4em auto;
 }
 
 /* Blog post or page title */
 .page-title,
 .post-title,
 .post-title a {
-  color: #444;
+  color: #333;
 }
 .page-title,
 .post-title {
@@ -525,7 +519,7 @@ a.pagination-item:hover {
 }
 
 /*
- * Footer Social
+ * Footer Social 
  *
  */
 
@@ -534,6 +528,49 @@ a.pagination-item:hover {
   right: 0;
   font-size: 1.2em;
 }
+
+
+/*
+ * Icon ( fa-icons ) monkey patching
+ *
+ */
+
+.footer .fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  color: #ccc;
+  font-size: 1.4em !important;
+  position: relative !important;
+  top: -0.1em !important;
+} 
+
+.footer .fa:hover {
+  color: #007af4;
+}
+
+
+/*
+ * About me
+ *
+ */
+
+.portrait-me {
+  margin: 0 auto;
+  background-color: #ccc;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: url('/public/img/euge.jpg');
+}
+
 
 /*
  * Huge Inc Style Overlay
@@ -557,7 +594,7 @@ a.pagination-item:hover {
 .menu-button:hover {
   color: #007af4;
 }
-
+/* Only for devises less than 1000px width, fade in out effect in main.js*/
 .menu-button-hidden {
   -webkit-transition: 0.3s all ease-in-out;  
   opacity: 0;
@@ -582,7 +619,8 @@ a.pagination-item:hover {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0,0,0,0.95);
+  /*background: rgba(255,255,255,0.95);*/
+  background: rgba(0, 122, 244, 0.9);
 }
 
 /* Overlay closing cross */
@@ -634,13 +672,13 @@ a.pagination-item:hover {
   font-weight: 500;
   display: block;
   color: #fff;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .overlay ul li a:hover,
 .overlay ul li a:focus {
-  color: #21aff7;
+  color: #F4EDA1;
   text-decoration: none;
 }
 
