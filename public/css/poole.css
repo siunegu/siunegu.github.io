@@ -314,6 +314,22 @@ tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
 
+/*
+ * Icon ( fa-icons ) monkey patching
+ *
+ */
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1em;
+  position: relative !important;
+  top: -0.1em !important;
+} 
 
 /*
  * Container
