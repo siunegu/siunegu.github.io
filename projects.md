@@ -25,10 +25,12 @@ layout: page
 		</h2>
 		<small>RAILS, HTML5 + CSS3, MULTIPLE APIS, BOOTSTRAP</small>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, nobis officia, itaque ullam sed facilis eius maxime provident dictz.</p>
-		<p>
+		<h4 class="lead">
+			<small>
 			<a href="https://github.com/siunegu/chris-n-eugene">GITHUB</a> / 
 			<a href="https://boiling-citadel-1276.herokuapp.com">CHECKOUT WSIG.TO</a>
-		</p>
+			</small>
+		</h4>
 	</div>
 
 	<hr>
@@ -49,10 +51,12 @@ layout: page
 		</h2>
 		<small>RAILS, HTML5 + CSS3, JAVASCRIPT, JQUERY, MULTIPLE APIS, BOOTSTRAP</small>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, nobis officia, itaque ullam sed facilis eius maxime provident dictz.</p>
-		<p>
+		<h4 class="lead">
+			<small>
 			<a href="https://github.com/siunegu/EugeneAlanBen">GITHUB</a> / 
 			<!-- <a href="#">CHECKOUT SENSEI</a> -->CHECKOUT SENSEI
-		</p>		
+			</small>
+		</h4>		
 	</div>		
 		
 	<hr>	
@@ -75,11 +79,12 @@ layout: page
 		<i class="fa fa-quote-right"></i>
 		</h2>
 		<small>HTML5 + CSS3, WORDPRESS, JQUERY</small>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, nobis officia, itaque ullam sed facilis eius maxime provident dictz.</p>
-		<p>
-			<a href="https://github.com/siunegu/EugeneAlanBen">GITHUB</a> / 
-			<!-- <a href="#">CHECKOUT SENSEI</a> -->CHECKOUT FORCITE
-		</p>		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, nobis officia, itaque ullam sed facilis eius maxime provident dictz.</p>	
+		<h4 class="lead">
+			<small>
+			<a href="https://forcite.com.au">CHECKOUT FORCITE</a> 
+			</small>
+		</h4>			
 	</div>			
 
 </div>
