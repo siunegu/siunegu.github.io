@@ -28,7 +28,7 @@ Relative positioning is essentially to take an element, without removing it form
 
 To specify the ** offset **, use it together with `top`,`left`,`bottom,`,`right`.
 
-_ Example: _
+*Example:*
 ```
     h1 {
         position: relative;
@@ -43,7 +43,7 @@ Position something relative to it's parent object.
 > ** position: absolute **
 Aligns the element, in relation to it's parent element.
 
-_ Example: _
+*Example:*
 ```
     #container {
         /* blahblah - Stuff about the #container */
