@@ -29,12 +29,12 @@ Relative positioning is essentially to take an element, without removing it form
 To specify the ** offset **, use it together with `top`,`left`,`bottom,`,`right`.
 
 _ Example: _
-```css
-h1 {
-    position: relative;
-    top: 5px;
-    right: 5px;
-}
+```
+    h1 {
+        position: relative;
+        top: 5px;
+        right: 5px;
+    }
 ```
 Elements will move a specified distance relative to it's original position, without affecting the rest of the page.
 
@@ -44,19 +44,19 @@ Position something relative to it's parent object.
 Aligns the element, in relation to it's parent element.
 
 _ Example: _
-```css
-#container {
-    /* blahblah - Stuff about the #container */
-    position: relative;
-}
-img {
-    /* blahblah - Stuff about the img elements on the page */
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-    /* So here, the image knows to always sit at 
-    the very top left of it's parent element. */
+```
+    #container {
+        /* blahblah - Stuff about the #container */
+        position: relative;
+    }
+    img {
+        /* blahblah - Stuff about the img elements on the page */
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+        /* So here, the image knows to always sit at 
+        the very top left of it's parent element. */
 ```
 When you want an absolute positioned element to *honour* it's absolute positioning, it's ** parent ** element must be set to `position: relative` for this to take effect. 
 
