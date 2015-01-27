@@ -529,6 +529,33 @@ a.pagination-item:hover {
   font-size: 1.2em;
 }
 
+/*
+ * Responsive Footer & Overlay Close & Nav
+ *
+ */
+
+@media (max-width: 600px) {
+  .footer-social {
+    position: relative;
+    font-size: 1.2em;
+    display: block;
+    margin: 15px auto;
+    text-align: center;    
+  }
+  .footer small {
+    position: relative;
+    display: block;
+    text-align: center;    
+  }
+  .overlay .overlay-close {
+    width: 40px !important;
+    height: 40px !important;  
+  }
+  .overlay nav {
+    top: 44% !important;
+  }
+}
+
 
 /*
  * Icon ( fa-icons ) monkey patching
@@ -624,6 +651,7 @@ a.pagination-item:hover {
   left: 0;
   /*background: rgba(255,255,255,0.95);*/
   background: rgba(0, 122, 244, 0.9);
+  background-image: url(../img/small_steps.png);
 }
 
 /* Overlay closing cross */
@@ -635,7 +663,7 @@ a.pagination-item:hover {
   top: 28px;
   overflow: hidden;
   border: none;
-  background: url(../img/cross.png) no-repeat center center;
+  background: url(../img/cross-black.png) no-repeat center center;
   text-indent: 200%;
   color: transparent;
   outline: none;
@@ -674,7 +702,7 @@ a.pagination-item:hover {
 .overlay ul li a {
   font-weight: 500;
   display: block;
-  color: #fff;
+  color: #000;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
