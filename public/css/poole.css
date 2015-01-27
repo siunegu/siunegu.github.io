@@ -31,7 +31,7 @@
  *
  */
 
-@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,700italic);
 
 /*
  * Body resets
@@ -412,6 +412,8 @@ tbody tr:nth-child(odd) th {
 .post-title,
 .post-title a {
   color: #333;
+  font-weight: 700;
+  font-family: 'PT Serif', serif;
 }
 .page-title,
 .post-title {
@@ -422,8 +424,9 @@ tbody tr:nth-child(odd) th {
 .post-date {
   display: block;
   margin-top: -.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem;;
   color: #9a9a9a;
+  font-weight: 100;
 }
 
 /* Related posts */
