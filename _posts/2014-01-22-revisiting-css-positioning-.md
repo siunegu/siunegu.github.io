@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Revisiting CSS Positioning"
+title: "A little revisit of CSS Positioning: Static, Fixed, Relative & Absolute"
 date: 2014-01-22 14:59:00
 categories: css
 ---

@@ -6,7 +6,7 @@ relative_permalinks: true
 title:            "@siunegu"
 tagline:          Full Stack Web Developer
 url:              http://siunegu.github.io
-paginate:         3
+paginate:         1
 baseurl:          /
 author:
   name:           Eugenius Lai
