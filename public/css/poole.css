@@ -641,7 +641,7 @@ a.pagination-item:hover {
 @media (max-width: 1000px) {
  .menu-button {
   top: 8px;
-  right: 12px;
+  right: 8px;
   font-size: 1.6em;
   }
   .overlay ul li {
