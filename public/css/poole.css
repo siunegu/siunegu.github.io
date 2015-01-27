@@ -542,7 +542,7 @@ a.pagination-item:hover {
     position: relative;
     font-size: 1.2em;
     display: block;
-    margin: 15px auto;
+    margin: 25px auto;
     text-align: center;    
   }
   .footer small {
@@ -555,7 +555,7 @@ a.pagination-item:hover {
     height: 40px !important;  
   }
   .overlay nav {
-    top: 44% !important;
+    top: 40% !important;
   }
 }
 
