@@ -54,7 +54,7 @@ layout: page
 		<h4 class="lead">
 			<small>
 			<a href="https://github.com/siunegu/EugeneAlanBen">GITHUB</a> / 
-			<a href="http://getsensei.com">CHECKOUT SENSEI</a>
+			<a href="http://getsensei.net">CHECKOUT SENSEI</a>
 			</small>
 		</h4>		
 	</div>		
