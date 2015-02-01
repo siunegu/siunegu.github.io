@@ -24,7 +24,9 @@ layout: page
 		<i class="fa fa-quote-right"></i>
 		</h2>
 		<small>RAILS, HTML5 + CSS3, MULTIPLE APIS, BOOTSTRAP</small>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, nobis officia, itaque ullam sed facilis eius maxime provident dictz.</p>
+		<p>
+			A Travel Inspiration App to see destinations around the world. Users can create itineraries with lists of locales. Destination views also have a list of relevant activities and restaurants to visit while in the area.
+		</p>
 		<h4 class="lead">
 			<small>
 			<a href="https://github.com/siunegu/chris-n-eugene">GITHUB</a> / 
@@ -50,11 +52,13 @@ layout: page
 		<i class="fa fa-quote-right"></i>
 		</h2>
 		<small>RAILS, HTML5 + CSS3, JAVASCRIPT, JQUERY, MULTIPLE APIS, BOOTSTRAP</small>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, nobis officia, itaque ullam sed facilis eius maxime provident dictz.</p>
+		<p>
+			A Software As A Service where schools can be hosted into subdomains, and create their own unique micro-site. A School can be created on app, where then it is able to curate courses and lesson content. Each lesson's page has a video, documents, and any written description which is uploaded and can be viewed by students, who can then subscribe to a particular school's content. Schools can be billed for using the service through subscription.
+		</p>
 		<h4 class="lead">
 			<small>
 			<a href="https://github.com/siunegu/EugeneAlanBen">GITHUB</a> / 
-			<a href="http://getsensei.net">CHECKOUT SENSEI</a>
+			<a href="http://getsensei.net">CHECKOUT SENSEI ( WIP )</a>
 			</small>
 		</h4>		
 	</div>		
@@ -79,7 +83,9 @@ layout: page
 		<i class="fa fa-quote-right"></i>
 		</h2>
 		<small>HTML5 + CSS3, WORDPRESS, JQUERY</small>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, nobis officia, itaque ullam sed facilis eius maxime provident dictz.</p>	
+		<p>
+			A Product Landing Page for Sydney startup producing next-gen snow sports helmets with integrated comms, video camera, and a GPS tracker all integrated with a mobile app to make snow sports a more connected and fun experience.
+		</p>	
 		<h4 class="lead">
 			<small>
 			<a href="https://forcite.com.au">CHECKOUT FORCITE</a> 
