@@ -5,16 +5,17 @@ date:   2015-01-15 19:27:00
 categories: 
 ---
 
-"There is no Testing Boilerplate." All testing follows a simple "if I do this thing, then I should get this other thing" mentality, and with every usecase we should simply adopt this line of thinking. Here we'll detail out a simple case example of how a test can be run, using [rspec](https://github.com/rspec/rspec).
+"There is no Testing Boilerplate." Simply, testing follows a simple model of "if I do a thing, then I should get this other thing" course of events, and with each test usecase in a project we should simply adopt this mentality. Here we'll run out a simple case using the example of people ( yeah the ones in real life ) of how a test can be run, using [rspec](https://github.com/rspec/rspec).
 
-class Person, can walk, talk, eat, & think . 
-We can expect the average person that walks at an average of 4.7km per hour, so after an hour we expect the distance covered to be 4.7km from the starting distance. 
+So take for example the imaginary class Person, who can walk, talk, eat, & think. For the usecase of *walk*,
+let's say we expect Person walks at an average of 4.7km per hour, so after an hour we expect the distance covered to be 4.7km from the starting distance. 
 
+Let's begin by setting up a couple of spec files for testing. Note that this will not be done in rails, but vanilla ruby. We can run these commands in terminal to get started. 
 `mkdir lib spec`
 `mkdir lib/sims spec/sims`
 `touch spec/sims/person_spec.rb`
 
-Open person_spec.rb
+We can begin by opening the **person_spec.rb** we just created.
 
 ```
 module Sims
@@ -23,7 +24,8 @@ module Sims
 	end
 end
 ```
-running rspec
+
+running rspec we'll get our first error:
 
     `<module:Sims>': undefined local variable or method `person' for Sims:Module (NameError)
 
@@ -37,10 +39,13 @@ module Sims
 	end
 end
 ```
-running rspec again
+
+running rspec again we get that there's no file.
 
     `require': cannot load such file -- sims/person (LoadError)
 
+
+So let's make one person model. 
 `touch lib/sims/person.rb`
 
 ```
