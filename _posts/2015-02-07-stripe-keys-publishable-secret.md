@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A note about Charging with Stripe, secret and publishable keys"
-date: 2014-01-22 14:59:00
+date: 2015-02-07 15:29:00
 categories: css
 ---
 
