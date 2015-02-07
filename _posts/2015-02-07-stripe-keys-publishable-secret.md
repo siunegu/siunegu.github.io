@@ -21,7 +21,9 @@ You can grab the test and live API keys for your account under Your Account >> A
 The publishable key is used to generate credit card tokens and should be included with the HTML form. The secret key is used for all other API calls on the server-side.
 
 In  your new charges form views/charges/new.html.erb
-```html
+
+
+```
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:secret_key] %>"
           data-description="A month's subscription"
