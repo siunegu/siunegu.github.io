@@ -14,7 +14,9 @@
       </header>      
 
       <main>
-        <button class="menu-button" id="trigger-overlay">&#9776;</button>
+        <button class="menu-button" id="trigger-overlay">
+          <i class="fa fa-angle-double-up"></i>
+        </button>
         {{ content }}
       </main>
       {% include footer.html %}
@@ -39,7 +41,6 @@
     <script src="{{ site.baseurl }}public/js/modernizr.custom.js"></script>
     <script src="{{ site.baseurl }}public/js/classie.js"></script>
     <script src="{{ site.baseurl }}public/js/demo1.js"></script>
-    <script src="{{ site.baseurl }}public/js/jquery.fittext.js"></script>
     <script src="{{ site.baseurl }}public/js/main.js"></script>
     <script text="text/javascript">
       $(".post-title").fitText(1.2);
