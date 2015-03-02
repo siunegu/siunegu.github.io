@@ -13,6 +13,34 @@ layout: page
 		<div class="device">
 			<div class="screen">
 				<!-- PUT CONTENTS HERE -->
+					<img src="{{ site.baseurl }}public/img/innkeeper.png" alt="">        		
+			</div>
+		</div>
+	</div>
+	<div class="center-content">
+		<h2>
+		<i class="fa fa-quote-left"></i>
+			INNKEEPER
+		<i class="fa fa-quote-right"></i>
+		</h2>
+		<small>RAILS, JAVASCRIPT, JQUERY, HTML5 + CSS3, STRIPE, AWS, MANDRILL, BOOTSTRAP</small>
+		<p>
+			A Tenancy Management app that allows Landlords with private rentals to keep track of their properties and tenants. Prospective tenants can create lease applications where then andlords can then view these pending applications for their properties which they then approve. Once approved, tenants are then prompted to attach their payment details, where they then can be billed per interval for rent and amenities.
+		</p>
+		<h4 class="lead">
+			<small>
+			<a href="https://github.com/siunegu/Rentals_Tracker">GITHUB</a> / 
+			<a href="https://innkeeper-3002.herokuapp.com">CHECKOUT INNKEEPER</a>
+			</small>
+		</h4>
+	</div>
+
+	<hr>
+
+	<div class="device-mockup" data-device="macbook" data-orientation="portrait" data-color="black">
+		<div class="device">
+			<div class="screen">
+				<!-- PUT CONTENTS HERE -->
 					<img src="{{ site.baseurl }}public/img/wsigto.png" alt="">        		
 			</div>
 		</div>
@@ -51,7 +79,7 @@ layout: page
 			SENSEI
 		<i class="fa fa-quote-right"></i>
 		</h2>
-		<small>RAILS, HTML5 + CSS3, JAVASCRIPT, JQUERY, MULTIPLE APIS, BOOTSTRAP</small>
+		<small>RAILS, HTML5 + CSS3, JAVASCRIPT, JQUERY, MULTIPLE APIS, AWS, BOOTSTRAP</small>
 		<p>
 			A Software As A Service where schools can be hosted into subdomains, and create their own unique micro-site. A School can be created on app, where then it is able to curate courses and lesson content. Each lesson's page has a video, documents, and any written description which is uploaded and can be viewed by students, who can then subscribe to a particular school's content. Schools can be billed for using the service through subscription.
 		</p>
