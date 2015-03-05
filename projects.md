@@ -25,7 +25,7 @@ layout: page
 		</h2>
 		<small>RAILS, JAVASCRIPT, JQUERY, HTML5 + CSS3, STRIPE, AWS, MANDRILL, BOOTSTRAP</small>
 		<p>
-			A Tenancy Management app that allows Landlords with private rentals to keep track of their properties and tenants. Prospective tenants can create lease applications where then andlords can then view these pending applications for their properties which they then approve. Once approved, tenants are then prompted to attach their payment details, where they then can be billed per interval for rent and amenities.
+			A Tenancy Management app that allows Landlords with private rentals to keep track of their properties and tenants. Prospective tenants can create lease applications where then landlords can then view these pending applications for their properties which they then approve. Once approved, tenants are then prompted to attach their payment details, where they then can be billed per interval for rent and amenities.
 		</p>
 		<h4 class="lead">
 			<small>
