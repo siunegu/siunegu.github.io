@@ -6,7 +6,7 @@ categories: wistia uploader command line utility api
 ---
 
 While working on our [project-2](http://getsensei.net) at GA, we faced a number of difficulties for features to implement - the main one being video uploads, through Wistia. The problem with this, though you'd think "well that's easy, it's just a gem right?" well, yes and no. 
-Wistia provides amazing documentation on their video upload utility, the downside though is that it was only through the command-line. This didn't really help our novice minds much, but in this post I'll try and document the process of how we turned that utility into a graphical user interface in our app, so that teachers could upload content for their students.
+Wistia provides amazing documentation on their video upload utility, the downside though is that it was only through the command-line. This didn't really help our novice minds much, but in this post I'll try and document the process of how we turned that utility into a graphical user interface in our app, so that our users could upload videos.
 
 
 #### Gems
