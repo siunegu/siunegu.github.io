@@ -68,7 +68,8 @@ To build a basic PDF output first, let's write this code in our **orders_control
 		end
 	end
 ```
-> Note that the options in our `format.pdf do...end` block  `pdf:` `template:` & `layout:` are necessary for there to be an output. 
+
+Note that the options in our `format.pdf do...end` block  `pdf:` `template:` & `layout:` are necessary for there to be an output. 
 
 Now if you navigate to an order's endpoint such as `<your_app_name>/orders/1.pdf` you will be able view your PDF.
 
