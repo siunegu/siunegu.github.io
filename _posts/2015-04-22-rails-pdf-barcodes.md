@@ -46,6 +46,7 @@ You can find more usage of PDF creation options [here](https://github.com/milesz
 I will not go into building out our models and views in this brief walkthrough, but we will have an "**Orders**" model which will have a bunch of fields, but most importantly a "**Barcode**" field as a *String* where we will generate it dynamically later.
 
 To build a basic PDF output first, let's write this code in our **orders_controller.rb**
+
 ```
 	# GET /orders/1
 	# GET /orders/1.json
