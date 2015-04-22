@@ -4,7 +4,6 @@ title: "Rails PDF Generator with Barcodes generated from Models using Wicked PDF
 date: 2015-04-22 11:40:00
 categories: barby wicked_pdf rails pdf
 ---
-
 1. First Install **wicked_pdf** `gem wicked_pdf`
 2. Generate an initializer for wicked pdf `rails generate wicked_pdf`
 3. You'll need to add a new mime type in **mime_types.rb** for older versions of Rails 
@@ -15,6 +14,7 @@ Mime::Type.register "application/pdf", :pdf
 5. Now run `bundle install` for everything
 
 > if there is an issue with Yosemite add this to your **wicked_pdf.rb** file:
+
 ```
  module WickedPdfHelper
   if Rails.env.development?
@@ -40,6 +40,7 @@ You can find more usage of PDF creation options [here](https://github.com/milesz
 
 * * *
 # Getting Something Going
+
 I will not go into building out our models and views in this brief walkthrough, but we will have an "**Orders**" model which will have a bunch of fields, but most importantly a "**Barcode**" field as a *String* where we will generate it dynamically later.
 
 To build a basic PDF output first, let's write this code in our **orders_controller.rb**
@@ -71,10 +72,31 @@ To build a basic PDF output first, let's write this code in our **orders_control
 
 Now if you navigate to an order's endpoint such as `<your_app_name>/orders/1.pdf` you will be able view your PDF.
 
+> **pdf: "filenameofyourchoice"**
+> 
+> This contains the filename of the pdf that will be generated. You need
+> this line in order to let WickedPDF know to start its magic.
+> 
+> **template: "invoices/show.pdf.erb"**
+> 
+> This is your bread and butter. The draw of wicked_pdf is that you can
+> use an existing HTML layout to generate your PDF. This line tells
+> WickedPDF where to look for that particular file. In this case, it can
+> be found in your app/views/invoices/show.pdf.erb.
+> 
+> **locals: {:invoice => @invoice}**
+> 
+> With your HTML layout being loaded, what use is it if you cannot
+> populate it with dynamic data. In this example, you want to send your
+> invoice details to your view. To do so, we set the locals params like
+> in a partial. ( probably used when passing in complex relations )
+
 * * * 
+
 # Templates
 
 In our controller above we specified the template as an **layouts/application.pdf.erb**, which will have code similar to our *application.html.erb* except the catch is that we must use the 'wicked_pdf' tag helpers to have the loaded from the asset pipeline. It would look something like this:
+
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -92,9 +114,11 @@ In our controller above we specified the template as an **layouts/application.pd
 </html>
 
 ```
+
 We can then have specific partials to be displayed by `yield` or whichever you specify. 
 
 * * *
+
 # Show Variables
 
 Say we want to put model data onto the page ( which is most likely what we are doing anyway ), we simply output it like any other instance variable in rails *eg.* `@order = Order.find params[:id]` Then in an `order.pdf.erb` which we have specified as the layout in our controller code - and we will have saved in **views/layouts/order.pdf.erb** directory of our Rails application. 
@@ -106,15 +130,19 @@ So in our **order.pdf.erb** view we can simply do
 ``` 
 
 * * *
+
 # Displaying images
 
 Showing images is simply that we must use the wicked_pdf's helpers. The image is loaded from the same assets images folder as the rest of your media. 
+
 ```
 <%= wicked_pdf_image_tag( "name_of_image.jpg" ) %>
 ```
+
 > The helper simply outputs a string which is an `<img>` tag with the `src=""` attribute pointing to the image you specify in the helper.
 
 * * *
+
 # Barcodes
 
 So now's the tricky part, we first must install the `gem barby` as well as `gem chunky_png` ( chunky_png is only required if you want to output the Barcode image as a PNG ). You can find more information upon the specifics of Barby [here](https://github.com/toretore/barby) on the official documentation. 
@@ -130,6 +158,7 @@ First we must require a bunch of dependencies such as:
 - Chunky PNG because our PNG outputter requires it 
 
 So at the top of our Controller we:
+
 ```
 	  require 'chunky_png'
 	  require 'barby'
@@ -138,6 +167,7 @@ So at the top of our Controller we:
 ```
 
 So let's write a `barcode_output` function which will accept an order from our model. We put this in our controller for now ( why not ).
+
 ```
 	def barcode_output( order )
 	  barcode_string = order.barcode	  
@@ -149,6 +179,7 @@ So let's write a `barcode_output` function which will accept an order from our m
 ```	
 
 Now modify our **show** action in our controller to spit out a `@barcode` instance variable and pass an `@order` into it:
+
 ```
 		@order = Order.find(params[:id])
 		@barcode = barcode_output( @order )
@@ -157,11 +188,13 @@ Now modify our **show** action in our controller to spit out a `@barcode` instan
 ```
 
 Now we will have a string that looks something like this in your `@barcode`
+
 ```
 "data:image/svg+xml;base64,PD94bWwgdmVy..."
 ```
 
 Wicked PDF's `wicked_pdf_image_tag` outputs an `<img>` tag which points to a `file://Rails.root`based on the root of your rails application. In this specific case, we want to keep our image that we've generated at hand and pass it into the view. So let's build a new helper in our **app/helpers/application_helper.rb**
+
 ```
 module ApplicationHelper
   def wicked_pdf_image_tag_for_public(img, options={})
@@ -175,6 +208,23 @@ module ApplicationHelper
 end
 
 ```
+
 Which was taken from [this](http://stackoverflow.com/questions/12180433/wicked-pdf-image-tag-given-undefined-pathname-for-image)  StackOverflow answer. 
 
 Now if we call `<%= wicked_pdf_image_tag_for_public( @barcode ) %>` in our **vies/layouts/order.pdf.erb** it should display the barcode in our PDF !
+
+* * *
+
+# Heroku
+Uploading to Heroku you will need to have the wkhtmltopdf binary working on heroku side. To do this you can installa Heroku Buildpack at [heroku-buildpack-wkhtmltopdf](https://github.com/dscout/wkhtmltopdf-buildpack) 
+Once your application is live, in the same directory run
+
+```
+$ heroku config:set BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
+$ echo 'https://github.com/heroku/heroku-buildpack-ruby.git' >> .buildpacks
+$ echo 'https://github.com/dscout/wkhtmltopdf-buildpack.git' >> .buildpacks
+$ git add .buildpacks
+$ git commit -m 'Add multi-buildpack'
+```
+
+For more information on troubleshooting refer to link tot he documentation provided.
