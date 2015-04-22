@@ -34,11 +34,13 @@ Mime::Type.register "application/pdf", :pdf
 end
 ```
 
-* * *
+<hr>
+
 
 You can find more usage of PDF creation options [here](https://github.com/mileszs/wicked_pdf#advanced-usage-with-all-available-option) on the official gem documentation.
 
-* * *
+<hr>
+
 # Getting Something Going
 
 I will not go into building out our models and views in this brief walkthrough, but we will have an "**Orders**" model which will have a bunch of fields, but most importantly a "**Barcode**" field as a *String* where we will generate it dynamically later.
@@ -92,7 +94,7 @@ Now if you navigate to an order's endpoint such as `<your_app_name>/orders/1.pdf
 > invoice details to your view. To do so, we set the locals params like
 > in a partial. ( probably used when passing in complex relations )
 
-* * * 
+<hr> 
 
 # Templates
 
@@ -113,12 +115,12 @@ In our controller above we specified the template as an **layouts/application.pd
 	</div>
 </body>
 </html>
-
 ```
 
 We can then have specific partials to be displayed by `yield` or whichever you specify. 
 
-* * *
+<hr>
+
 
 # Show Variables
 
@@ -130,7 +132,8 @@ So in our **order.pdf.erb** view we can simply do
 # etc...
 ``` 
 
-* * *
+<hr>
+
 
 # Displaying images
 
@@ -142,7 +145,8 @@ Showing images is simply that we must use the wicked_pdf's helpers. The image is
 
 > The helper simply outputs a string which is an `<img>` tag with the `src=""` attribute pointing to the image you specify in the helper.
 
-* * *
+<hr>
+
 
 # Barcodes
 
@@ -214,7 +218,8 @@ Which was taken from [this](http://stackoverflow.com/questions/12180433/wicked-p
 
 Now if we call `<%= wicked_pdf_image_tag_for_public( @barcode ) %>` in our **vies/layouts/order.pdf.erb** it should display the barcode in our PDF !
 
-* * *
+<hr>
+
 
 # Heroku
 Uploading to Heroku you will need to have the wkhtmltopdf binary working on heroku side. To do this you can installa Heroku Buildpack at [heroku-buildpack-wkhtmltopdf](https://github.com/dscout/wkhtmltopdf-buildpack) 
