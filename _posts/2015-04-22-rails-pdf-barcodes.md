@@ -7,6 +7,7 @@ categories: barby wicked_pdf rails pdf
 1. First Install **wicked_pdf** `gem wicked_pdf`
 2. Generate an initializer for wicked pdf `rails generate wicked_pdf`
 3. You'll need to add a new mime type in **mime_types.rb** for older versions of Rails 
+
 ```
 Mime::Type.register "application/pdf", :pdf
 ```
@@ -102,20 +103,12 @@ Now if you navigate to an order's endpoint such as `<your_app_name>/orders/1.pdf
 In our controller above we specified the template as an **layouts/application.pdf.erb**, which will have code similar to our *application.html.erb* except the catch is that we must use the 'wicked_pdf' tag helpers to have the loaded from the asset pipeline. It would look something like this:
 
 ```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<%= wicked_pdf_stylesheet_link_tag "orders" -%>
-	<%= wicked_pdf_javascript_include_tag "number_pages" -%>
-	<title>Orders</title>
-</head>
-<body onload="number_pages">
-	<div id="header">
-		<%= yield %>
-	</div>
-</body>
-</html>
+<%= wicked_pdf_stylesheet_link_tag "orders" %>
+<p><%= @order.barcode %></p>
+<p><%= @order.article_number %></p>
+<p><%= @order.created_at %></p>
+
+<%= wicked_pdf_image_tag_for_public( @barcode ) %>
 ```
 
 We can then have specific partials to be displayed by `yield` or whichever you specify. 
