@@ -126,7 +126,8 @@ We can then have specific partials to be displayed by `yield` or whichever you s
 # Show Variables
 
 Say we want to put model data onto the page ( which is most likely what we are doing anyway ), we simply output it like any other instance variable in rails *eg.* `@order = Order.find params[:id]` Then in an `order.pdf.erb` which we have specified as the layout in our controller code - and we will have saved in **views/layouts/order.pdf.erb** directory of our Rails application. 
-So in our **order.pdf.erb** view we can simply do 
+So in our **order.pdf.erb** view we can simply do: 
+
 ```
 <%= @order.barcode %> 
 <%= @order.something_else %> 
@@ -212,7 +213,6 @@ module ApplicationHelper
     end
   end	
 end
-
 ```
 
 Which was taken from [this](http://stackoverflow.com/questions/12180433/wicked-pdf-image-tag-given-undefined-pathname-for-image)  StackOverflow answer. 
